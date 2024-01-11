@@ -1,0 +1,80 @@
+{
+  "name": "Hinata Special",
+  "description": "file sharing access by special links",
+  "stack": "heroku-22",
+  "keywords": [
+    "telegram",
+    "file",
+    "sharing"
+  ],
+  "logo": "https://ibb.co/58bDBwZ",
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "Your Bot token, Get it from @Botfather",
+      "value": ""
+    },
+    "OWNER": {
+      "description": "Enter Telegram Username for BOT Owner [Don't Use @]",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "Enter Owner ID Like 1288064223",
+      "value": ""
+    },
+    "ADMINS": {
+      "description": "Enter User ID to get Admin rights in BOT [Use Spaces to Separate User ID]",
+      "value": "1288064223"
+    },
+    "APP_ID": {
+      "description": "Your app id, take it from my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Your api hash, take it from my.telegram.org",
+      "value": ""
+    },
+    "CHANNEL_ID": {
+      "description": "Enter Channel ID for [Channel Database]",
+      "value": ""
+    },
+    "PROTECT_CONTENT": {
+      "description": "To prevent bot users from downloading/forwarding/screenshotting content sent to the bot [If you want to activate it, change it to True]",
+      "value": "False"
+    },
+    "FORCE_SUB_CHANNEL": {
+      "description": "Enter the ID of the channel or group for mandatory subscription. If you don't want to use the Fsub, fill in 0",
+      "value": ""
+    },
+    "FORCE_SUB_GROUP": {
+      "description": "Enter the ID of the channel or group for mandatory subscription. If you don't want to use the Fsub, fill in 0",
+      "value": ""
+    },
+    "DATABASE_NAME": {
+      "description": "Mangodb database name",
+      "value": "Hinata"
+    },
+    "DATABASE_URL": {
+      "description": "Mangodb url",
+      "value": ""
+    },
+    "START_MESSAGE": {
+      "description": "The /start message initiates a prefix to the bot, Uses HTML parsemode format",
+      "value": "<b>Hello👋 {first}</b>\n\n<b>I can provide files given by @Bihari_Network, and other users can access them through a special link.</b>"
+    },
+    "FORCE_SUB_MESSAGE": {
+      "description": "Force Subscribe bot message, Use HTML parsemode format",
+      "value": "<b>Hello {first}\n\nYou must join Both Channel/Group first to view the shared files\n\nPlease🥹 join the Channel & Group first</b>"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
